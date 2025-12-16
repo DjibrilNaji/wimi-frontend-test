@@ -1,6 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
+import { Layout } from "@/components/Layout/Layout"
 import LoginPage from "@/pages/LoginPage"
+import TodolistPage from "@/pages/TodolistPage"
+import { ProtectedRoute } from "@/router/ProtectedRoute"
 import { PublicRoute } from "@/router/PublicRoute"
 import { routes } from "@/routes"
 
@@ -14,6 +17,17 @@ function App() {
             <PublicRoute>
               <LoginPage />
             </PublicRoute>
+          }
+        />
+
+        <Route
+          path={routes.todolist.list}
+          element={
+            <ProtectedRoute>
+              <Layout pageTitle="Mes listes de tâches">
+                <TodolistPage />
+              </Layout>
+            </ProtectedRoute>
           }
         />
 
