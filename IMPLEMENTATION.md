@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-The application will be accessible at `http://localhost:3000` and you have to run the mock API server at `http://localhost:3001`.
+The application will be accessible at `http://localhost:5173` and you have to run the mock API server at `http://localhost:3001`.
 
 _Note: No additional environment variables are required. The frontend communicates directly with the mock API at http://localhost:3001._
 
