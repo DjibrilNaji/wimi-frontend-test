@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
 import { Layout } from "@/components/Layout/Layout"
 import LoginPage from "@/pages/LoginPage"
+import TodolistDetailPage from "@/pages/TodolistDetailPage"
 import TodolistPage from "@/pages/TodolistPage"
 import { ProtectedRoute } from "@/router/ProtectedRoute"
 import { PublicRoute } from "@/router/PublicRoute"
@@ -24,8 +25,19 @@ function App() {
           path={routes.todolist.list}
           element={
             <ProtectedRoute>
-              <Layout pageTitle="Mes listes de tâches">
+              <Layout pageTitle="Todolists">
                 <TodolistPage />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path={routes.todolist.one(":id")}
+          element={
+            <ProtectedRoute>
+              <Layout pageTitle="Todolist Details">
+                <TodolistDetailPage />
               </Layout>
             </ProtectedRoute>
           }
