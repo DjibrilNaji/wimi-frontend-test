@@ -88,6 +88,9 @@ However, the project architecture is designed to easily accommodate testing tool
 - [x] Session persistence via localStorage
 - [x] Animations with Framer Motion (transitions, etc..)
 - [x] Form validation with Zod
+- [x] Create tasks list
+- [x] Edit todos
+- [x] Delete todos
 
 ## 📚 Libraries & Dependencies
 
@@ -119,7 +122,7 @@ However, the project architecture is designed to easily accommodate testing tool
 1. Color selection for each new list
 2. Dark/light mode
 3. Advanced notifications and additional animations
-4. Edit and delete tasks
+4. Edit and delete tasks lists
 5. User profile management
 
 ## 🤔 Challenges & Learnings
